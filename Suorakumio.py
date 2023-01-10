@@ -1,5 +1,6 @@
-
 kanta = input("Kirjoita tähän suorakulmion kanta ")
+kanta = int(kanta)
 korkeus = input("ja korkeus ")
-print("Suorakulmion piiri on ", {kanta + korkeus + kanta + korkeus})
-print("suoraklumion pinta-ala on ", {kanta * korkeus})
+korkeus = int(korkeus)
+print("Suorakulmion piiri on ", (kanta + kanta + korkeus + korkeus))
+print("suorakulmion pinta-ala on ", (kanta * korkeus))
