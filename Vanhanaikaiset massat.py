@@ -10,7 +10,13 @@ naulat = (32 * 13.3 * naulat)
 luodit = (13.3 * luodit)
 
 
-paino = (leiviskat + naulat + luodit)
+paino = float((leiviskat + naulat + luodit))
+print(round(paino / 1000))
+print("kilogrammaa ja ")
+print(round(paino % 1000))
+print("grammaa.")
 
-print(paino / 1000, "kg")
-round(paino % 1000, 2)
+
+
+
+
