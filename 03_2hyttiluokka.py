@@ -1,4 +1,5 @@
 user_input = input("Minkä hyttiluokan olet varannut? (LUX, A, B, C) ")
+
 if user_input.capitalize() == 'LUX':
     print("LUX on parvekkeellinen hytti yläkannella.")
 elif user_input.capitalize() == 'A':

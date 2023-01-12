@@ -3,8 +3,7 @@ kv = int(vuosiluku) % 4
 kvs = int(vuosiluku) % 100
 kvns = int(vuosiluku) % 400
 
-
-if kvs == 0 and kvns == 0 and kv == 0:
+if kv == 0:
      print("Vuosi on karkausvuosi.")
 else:
     print("Vuosi ei ole karkausvuosi. ")
