@@ -5,7 +5,7 @@ kvns = int(vuosiluku) % 400
 
 if kvs == 0 and kvns == 0:
     print("Vuosi on karkausvuosi.")
-elif kv == 0:
+elif kv == 0 and kvs != 0:
     print("Vuosi on karkausvuosi.")
 else:
     print("Vuosi ei ole karkausvuosi. ")
