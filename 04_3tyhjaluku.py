@@ -1,6 +1,6 @@
 number_array = []
 while True:
-     number =  (input("Anna luku: "))
+     number = (input("Anna luku: "))
 
      if number != "":
           try:
