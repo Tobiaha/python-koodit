@@ -30,7 +30,7 @@ toyota.kiihdytä(+70)
 toyota.kiihdytä(+50)
 print(f"Tämän hetkinen nopeus {toyota.tämänhetkinennopeus} km/h")
 toyota.kiihdytä(-200)
-print(f"Hätäjarrutus... {toyota.tämänhetkinennopeus} km/h")
+print(f"Hätäjarrutus...nopeus nyt {toyota.tämänhetkinennopeus} km/h")
 print(f"Kuljettu matka {toyota.kuljettumatka}")
 
 

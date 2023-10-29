@@ -15,20 +15,10 @@ class Auto:
     def kulje(self, tunti):
         self.kuljettumatka += self.tämänhetkinennopeus * tunti
 
-
-
-
-
-
-
-
-
 toyota = Auto("ABC-123", 142,)
 print(f"Uuden auton rekisteritunnus on {toyota.rekisteritunnus}")
 print(f"Huippunopeus on {toyota.huippunopeus} km/h")
 print(f"Tämän hetkinen nopeus on {toyota.tämänhetkinennopeus} km/h")
-
-
 
 print(f"Auto on kulkenut {toyota.kuljettumatka} km")
 toyota.kulje(1.5)

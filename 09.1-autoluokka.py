@@ -8,5 +8,5 @@ class Auto:
 toyota = Auto("ABC-123", 142)
 print(f"Uuden auton rekisteritunnus on {toyota.rekisteritunnus}")
 print(f"Huippunopeus on {toyota.huippunopeus} km/h")
-print("Tämän hetkinen nopeus {toyota.tämänhetkinennopeus}")
-print("Kuljettu matka {toyota.kuljettumatka}")
+print(f"Tämän hetkinen nopeus {toyota.tämänhetkinennopeus}")
+print(f"Kuljettu matka {toyota.kuljettumatka}")

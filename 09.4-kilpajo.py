@@ -7,11 +7,6 @@ class Auto:
         self.kuljettumatka = 0
     def kiihdytä(self, muutos):
         self.tämänhetkinennopeus += muutos
-        if self.tämänhetkinennopeus >= self.huippunopeus:
-            self.tämänhetkinennopeus = self.huippunopeus
-        if self.tämänhetkinennopeus < 0:
-            self.tämänhetkinennopeus = 0
-
     def kulje(self, tunti):
         self.kuljettumatka += self.tämänhetkinennopeus * tunti
 
@@ -27,17 +22,21 @@ for i in range(1, 11):
     auto = Auto(rekisteritunnus)
     autot.append(auto)
 
+
 kilpailu = True
+
 while kilpailu:
-    for auto in autot:
-        random.randint(-10, 15)  # km/h
-        auto.kulje(1)
-        print(f"{auto.kuljettumatka} km")
-    if auto.kuljettumatka <= 10000:
-        kilpailu = False
-        break
-print(f"rekisteri, huippunopeus, nopeus, matka")
-for auto in autot:
-    auto.ominaisuudet()
+    for i in autot:
+        auto.kiihdytä(random.randint(-10, 15))  # km/h
+        auto.kulje(1)                           #tunti
+
+        print(f"{auto.rekisteritunnus} on kulkenut {auto.kuljettumatka} km")
+
+        if auto.kuljettumatka >= 10000:
+          kilpailu = False
+          break
+
+
+print(autot)
 
 

@@ -13,7 +13,7 @@ while True:
 
      else:
           break
-print(min(number_array), max(number_array))
+print(min(number_array), ",", max(number_array))
 
 
 
