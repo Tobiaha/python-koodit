@@ -1,5 +1,6 @@
 class Hissi:
-    def __init__(self, alin_kerros, ylimmän_kerros):
+    def __init__(self, hissin_numero, alin_kerros, ylimmän_kerros):
+        self.hissin_numero = hissin_numero
         self.alin_kerros = alin_kerros
         self.ylin_kerros = ylimmän_kerros
         self.nykyinen_kerros = alin_kerros
@@ -18,16 +19,16 @@ class Hissi:
     def kerros_ylös(self):
         if self.nykyinen_kerros < self.ylin_kerros:
             self.nykyinen_kerros += 1
-            print(f"Hissi on nyt kerroksessa {self.nykyinen_kerros}")
+            print(f"Hissi {self.hissin_numero} on nyt kerroksessa {self.nykyinen_kerros}")
         else:
-            print("Hissi on jo ylimmässä kerroksessa!")
+            print(f"Hissi {self.hissin_numero} on jo ylimmässä kerroksessa!")
 
     def kerros_alas(self):
         if self.nykyinen_kerros > self.alin_kerros:
             self.nykyinen_kerros -= 1
-            print(f"Hissi on nyt kerroksessa {self.nykyinen_kerros}")
+            print(f"Hissi {self.hissin_numero} on nyt kerroksessa {self.nykyinen_kerros}")
         else:
-            print("Hissi on jo alimmassa kerroksessa!")
+            print(f"Hissi {self.hissin_numero} on jo alimmassa kerroksessa!")
 
 class Talo:
     def __init__(self, alin_kerros, ylimmän_kerros, hissien_lukumäärä):
@@ -38,6 +39,7 @@ class Talo:
             self.hissit.append(Hissi(alin_kerros, ylimmän_kerros))
 
     def aja_hissiä(self, hissin_numero, kohde_kerros):
+
         hissi = self.hissit[hissin_numero]
         hissi.siirry_kerrokseen(kohde_kerros)
 

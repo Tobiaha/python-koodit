@@ -9,34 +9,45 @@ class Auto:
         self.tämänhetkinennopeus += muutos
     def kulje(self, tunti):
         self.kuljettumatka += self.tämänhetkinennopeus * tunti
+    def rivi(self):
+        print(f"{self.rekisteritunnus}      |       {self.huippunopeus}       |       {self.kuljettumatka}")
+    def rivi10(self):
+        print(f"{self.rekisteritunnus}     |       {self.huippunopeus}       |       {self.kuljettumatka}")
 
-    def ominaisuudet(self):
-        print(self.rekisteritunnus)
-        print(self.huippunopeus)
-        print(self.tämänhetkinennopeus)
-        print(self.kuljettumatka)
 
 autot = []
 for i in range(1, 11):
     rekisteritunnus = f"ABC-{i}"
     auto = Auto(rekisteritunnus)
     autot.append(auto)
+    #print(auto, rekisteritunnus)
 
 
 kilpailu = True
 
 while kilpailu:
-    for i in autot:
+    for auto in autot:
         auto.kiihdytä(random.randint(-10, 15))  # km/h
         auto.kulje(1)                           #tunti
-
-        print(f"{auto.rekisteritunnus} on kulkenut {auto.kuljettumatka} km")
 
         if auto.kuljettumatka >= 10000:
           kilpailu = False
           break
+def tee_taulukko(lista):
+
+    print("Rekisterinumero  huippunopeus  kuljettu matka")
+
+    i = 0
+    for auto in lista:
+        i += 1
+        if i < 10:
+            auto.rivi()
+        else:
+            auto.rivi10()
 
 
-print(autot)
+tee_taulukko(autot)
+
+
 
 
